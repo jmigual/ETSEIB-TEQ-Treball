@@ -1,0 +1,3 @@
+\select@language {catalan}
+\contentsline {section}{\numberline {1}Introducció}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Sistema a estudiar}{2}{subsection.1.1}
