@@ -48,7 +48,7 @@ En aquest treball s'han usat les tècniques de disseny d'experiments per poder v
 \subsection{Sistema a estudiar}
 L'activitat principal de \emph{Proteïn S.A.} és fabricar  \emph{\href{https://es.wikipedia.org/wiki/Col\%C3\%A1geno_hidrolizado}{co\l.lagen hidrolitzat}} a partir de l'ós de porc. A part un subproducte que genera és el \emph{\href{https://es.wikipedia.org/wiki/Fosfato_tric\%C3\%A1lcico}{Fosfat Tricàlcic}} ($Ca_3 (PO_4)_2$) o també conegut com \emph{apatita}. La característica principal de l'apatita és que els compradors la volen amb un \% en massa superior al 15\%. Si aquesta condició no es pot garantir els clients reclamaran indemnitzacions o aniran a comprar a la competència.
 
-Per poder saber quins factors s'han de controlar cal entendre primer com funciona la part del procés d'on s'obté l'apatita, veure \autoref{fig:esquema}. Inicialment el producte arriba del procés anterior i conté co\l.lagen i apatita en suspensió en aigua (línia blava al P\&D). Així doncs, s'ha de separar l'apatita de l'aigua, el problema és que precipita molt fàcilment i s'ha de forçar que es mantingui en suspensió. Per tant, hi ha una sèrie d'elements que asseguren que això sigui així; al dipòsit on va a parar (C-03) hi ha un parell de barrejadors i una bomba de recirculació (P-C32). 
+Per poder saber quins factors s'han de controlar cal entendre primer com funciona la part del procés amb el que s'obté l'apatita, veure \autoref{fig:esquema}. Inicialment el producte arriba del procés anterior i conté co\l.lagen i apatita en suspensió en aigua (línia blava al P\&D). Així doncs, s'ha de separar l'apatita de l'aigua, el problema és que precipita molt fàcilment i s'ha de forçar que es mantingui en suspensió. Per tant, hi ha una sèrie d'elements que asseguren que això sigui així; al dipòsit on va a parar (C-03) hi ha un parell de barrejadors i una bomba de recirculació (P-C32). 
 
 \begin{figure}[H]
 	\centering
@@ -57,7 +57,9 @@ Per poder saber quins factors s'han de controlar cal entendre primer com funcion
 	\label{fig:esquema}
 \end{figure}
 
-Per tal de separar el co\l.lagen i l'apatita s'usa un \emph{\href{https://youtu.be/uvWcLZWM_JY}{tricànter}} (veure \autoref{fig:tricanter}), tot i que en aquest procés només funciona com a \emph{decànter}. Aquesta màquina el que fa és, mitjançant força centrífuga separar els sòlids dels líquids dels greixos, no hi ha greix en aquest cas. Per fer-ho té un cilindre exterior que gira a alta velocitat i un vis sens fi interior que gira a una mica més ràpid que l'exterior, de manera que el vis sens fi va desplaçant lentament el sòlid cap al final del tricànter, situat a l'esquerra de la \autoref{fig:tricanter}, i el líquid cap al principi. 
+Per tal de separar el co\l.lagen i l'apatita s'usa un \emph{\href{https://youtu.be/uvWcLZWM_JY}{tricànter}} (veure \autoref{fig:tricanter}), tot i que en aquest procés només funciona com a \emph{decànter}. Aquesta màquina el que fa és, mitjançant força centrífuga separar els sòlids dels líquids dels greixos, no hi ha greix en aquest cas. Cal tenir en compte que aquesta separació no és perfecte i que part del co\l.lagen s'escapa junt amb l'apatita que s'obté.
+
+Per fer la separació la màquina consta d'un cilindre exterior que gira a alta velocitat i un vis sens fi interior que gira a una mica més ràpid que l'exterior, de manera que el vis sens fi va desplaçant lentament el sòlid cap al final del tricànter, situat a l'esquerra de la \autoref{fig:tricanter}, i el líquid cap al principi. 
 
 Aquesta diferència de velocitats entre els cilindres interiors i exteriors influeix en la velocitat a la que s'elimina el sòlid de dins de la màquina i també en la quantitat d'aigua que contindrà.
 
@@ -70,7 +72,7 @@ Aquesta diferència de velocitats entre els cilindres interiors i exteriors infl
 
 \begin{figure}[H]
 	\centering
-	\animategraphics[autoplay, loop, poster =none]{20}{images/tricanter-movie/tricanter-movie-}{0}{384}
+	\animategraphics[draft, autoplay, loop, poster =234, width = 0.5\textwidth]{15}{images/tricanter-movie/tricanter-movie-}{0}{384}
 	\caption{Animació explicativa de com funciona un tricanter}
 \end{figure}
 
@@ -82,6 +84,14 @@ Així doncs un cop descrit el sistema es poden veure els factors que s'hauran de
 	\item Velocitat de la bomba P-C32 (en Hz)
 	\item Cabal d'entrada al tricànter T-05
 	\item Diferència de velocitats entre els cilindres interior i exterior
+\end{itemize}
+
+\subsection{Objectius}
+Donat que els clients poden reclamar si la qualitat d'apatita no és suficient i que hi ha part de co\l.lagen que es perd per la línia de l'apatita ens interessa complir els següents objectius:
+
+\begin{itemize}
+	\item Maximitzar el \% en massa d'apatita
+	\item Minimitzar el \% en massa de co\l.lagen a la línia de l'apatita
 \end{itemize}
 
 \end{document}
