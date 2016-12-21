@@ -1,12 +1,14 @@
 \documentclass[a4paper]{article}
 \usepackage[margin=2cm]{geometry}
 
+\usepackage{fontspec}
 \usepackage{animate}
 \usepackage{graphicx}
-\usepackage{fontspec}
 \usepackage[catalan]{babel}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{array}
+\usepackage[table, dvipsnames]{xcolor}
 
 \hypersetup{
 	colorlinks = true,
@@ -93,18 +95,48 @@ Aquesta diferència de velocitats entre els cilindres interiors i exteriors infl
 	\caption{Animació explicativa de com funciona un tricanter}
 \end{figure}
 
+\subsection{Obtenció i mesura d'una mostra}
+Per obtenir una mostra simplement s'agafa de la sortida del tricànter una mica de producte i després es porta al laboratori on es mesurarà.
+
+El procés de mesura és una mica més complicat i consta d'una sèrie d'etapes:
+
+\begin{enumerate}
+	\item Es pesa la mostra que conté, entre d'altres, aigua, co\l.lagen i fosfat.
+	\item Es posa en un forn a 100ºC per tal d'evaporar tota l'aigua 
+	\item Es torna a pesar i es pot veure la quantitat d'aigua que s'ha eliminat
+	\item Es posa de nou en un forn però ara a 400ºC per tal d'eliminar mitjançant piròlisi tota la matèria orgànica.
+	\item Es torna a pesar i així es pot veure per composició estequiomètrica la quantitat d'apatita en \% en massa que hi havia a la mostra presa.
+\end{enumerate} 
 
 \subsection{Factors i nivells}
-
 
 Un cop s'ha vist el sistema que a estudiar es poden veure els factors que s'hauran de controlar per tal de realitzar l'estudi:
 
 \begin{itemize}
-	\item Volum al dipòsit C-03 (en kg)
-	\item Velocitat de la bomba P-C32 (en Hz)
-	\item Cabal d'entrada al tricànter T-05
 	\item Diferència de velocitats entre els cilindres interior i exterior
+	\item Cabal d'entrada al tricànter T-05 (L/h)
+	\item Velocitat de la bomba P-C32 (en Hz)
+	\item Volum al dipòsit C-03 (en kg)
 \end{itemize}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{2}{gray!25}{white}
+	\begin{tabular}{llrr}
+		\rowcolor{gray!40}
+		Variable Minitab & Factor & Nivell baix & Nivell alt \\
+		A & Diferencial & 8 & 12 \\
+		B & Cabal H20 (L/h)& 1800 & 2400 \\
+		C & Velocitat P-C32 (Hz) & 50 & 75 \\
+		D & Volum C-03 (kg) & 1600 & 2000 \\
+	\end{tabular}
+\end{table}
+
+\subsection{Nombre d'experiments i restriccions externes}
+Per tal de realitzar els experiments s'ha decidit amb l'empresa de prendre una mostra cada 12 hores. Aquest interval s'ha decidit així per assegurar-se que el sistema està en equilibri a l'hora de prendre una mostra i que no hi ha altres factors que alteren el resultat, ja que si el sistema es trobés en un estat transitori el resultat es podria veure afectar i això no interessa.
+
+Amb aquest interval de 12 hores entre mostres es calcula que es podran realitzar tots els experiments d'un disseny factorial complet $2^4$ començant a prendre les mostres el 24 de novembre de 2016 i havent acabat als voltants del 16 de desembre de 2016. Tenint en compte que a la fabrica hi poden haver averies o altres incidents que impedeixin realitzar l'experiment.
 
 
 \end{document}
