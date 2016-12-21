@@ -43,11 +43,28 @@
 \pagebreak
 
 \section{Introducció}
-En aquest treball s'han usat les tècniques de disseny d'experiments per poder veure el funcionament d'un sistema. Per tal de poder tenir una motivació més alta, s'ha contactat amb l'empresa \emph{Proteïn S.A.} de manera que el cas presentat fos un real. 
+En aquest treball s'han usat les tècniques de disseny d'experiments per poder veure el funcionament d'un sistema. Per tal de poder tenir una motivació més alta, s'ha contactat amb l'empresa \emph{\href{http://www.protein.es/}{Proteïn S.A.}} de manera que el cas presentat fos un real. 
+
+\subsection{Tema escollit}
+L'activitat principal de \emph{Proteïn S.A.} és fabricar  \emph{\href{https://es.wikipedia.org/wiki/Col\%C3\%A1geno_hidrolizado}{co\l.lagen hidrolitzat}} a partir de l'ós de porc que és usat a la indústria de l'alimentació per afegir els nutrients necessaris a la carn. 
+
+A part, un subproducte que es genera és el \emph{\href{https://es.wikipedia.org/wiki/Fosfato_tric\%C3\%A1lcico}{Fosfat Tricàlcic}} ($Ca_3 (PO_4)_2$) o també conegut com \emph{apatita} i un dels usos més comuns és per les gallines que ponen ous perquè no es quedin sense calci.
+
+El problema principal de l'apatita és que els compradors la volen amb un \% en massa igual o superior al 15\%. Si aquesta condició no es pot garantir els clients reclamaran indemnitzacions o aniran a comprar a la competència. Així doncs, aquest serà l'objecte principal de l'estudi ja que l'empresa vol assegurar-se que la qualitat de la seva apatita és bona. 
+
+A part també hi ha co\l.lagen que s'escapa per la línia de l'apatita a l'hora de separar els dos productes pel que també pot ser d'interès minimitzar la quantitat que es perd perquè no s'ha pogut separar prou bé.
+
+\subsection{Objectius}
+Donat que els clients poden reclamar si la qualitat d'apatita no és suficient i que hi ha part de co\l.lagen que es perd per la línia de l'apatita ens interessa complir els següents objectius:
+
+\begin{itemize}
+	\item Maximitzar el \% en massa d'apatita
+	\item Minimitzar el \% en massa de co\l.lagen a la línia de l'apatita
+\end{itemize}
+
+\section{Disseny}
 
 \subsection{Sistema a estudiar}
-L'activitat principal de \emph{Proteïn S.A.} és fabricar  \emph{\href{https://es.wikipedia.org/wiki/Col\%C3\%A1geno_hidrolizado}{co\l.lagen hidrolitzat}} a partir de l'ós de porc. A part un subproducte que genera és el \emph{\href{https://es.wikipedia.org/wiki/Fosfato_tric\%C3\%A1lcico}{Fosfat Tricàlcic}} ($Ca_3 (PO_4)_2$) o també conegut com \emph{apatita}. La característica principal de l'apatita és que els compradors la volen amb un \% en massa superior al 15\%. Si aquesta condició no es pot garantir els clients reclamaran indemnitzacions o aniran a comprar a la competència.
-
 Per poder saber quins factors s'han de controlar cal entendre primer com funciona la part del procés amb el que s'obté l'apatita, veure \autoref{fig:esquema}. Inicialment el producte arriba del procés anterior i conté co\l.lagen i apatita en suspensió en aigua (línia blava al P\&D). Així doncs, s'ha de separar l'apatita de l'aigua, el problema és que precipita molt fàcilment i s'ha de forçar que es mantingui en suspensió. Per tant, hi ha una sèrie d'elements que asseguren que això sigui així; al dipòsit on va a parar (C-03) hi ha un parell de barrejadors i una bomba de recirculació (P-C32). 
 
 \begin{figure}[H]
@@ -77,7 +94,10 @@ Aquesta diferència de velocitats entre els cilindres interiors i exteriors infl
 \end{figure}
 
 
-Així doncs un cop descrit el sistema es poden veure els factors que s'hauran de controlar per tal de realitzar l'estudi:
+\subsection{Factors i nivells}
+
+
+Un cop s'ha vist el sistema que a estudiar es poden veure els factors que s'hauran de controlar per tal de realitzar l'estudi:
 
 \begin{itemize}
 	\item Volum al dipòsit C-03 (en kg)
@@ -86,12 +106,5 @@ Així doncs un cop descrit el sistema es poden veure els factors que s'hauran de
 	\item Diferència de velocitats entre els cilindres interior i exterior
 \end{itemize}
 
-\subsection{Objectius}
-Donat que els clients poden reclamar si la qualitat d'apatita no és suficient i que hi ha part de co\l.lagen que es perd per la línia de l'apatita ens interessa complir els següents objectius:
-
-\begin{itemize}
-	\item Maximitzar el \% en massa d'apatita
-	\item Minimitzar el \% en massa de co\l.lagen a la línia de l'apatita
-\end{itemize}
 
 \end{document}
