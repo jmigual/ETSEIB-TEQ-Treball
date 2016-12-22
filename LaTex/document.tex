@@ -43,6 +43,7 @@
 	\vfill
 	\begin{flushright}
 		\large
+		\texttt{Grup 21} \par
 		Marc Asenjo i Ponce de León \par
 		Joan Marcè i Igual \par
 		Iñigo Moreno i Caireta \par
@@ -77,13 +78,13 @@ Donat que els clients poden reclamar si la qualitat d'apatita no és suficient i
 
 \begin{itemize}
 	\item Maximitzar el \% en massa de fosfor a l'apatita
-	\item Minimitzar el \% en massa de co\l.lagen a la línia de l'apatita
+	\item Minimitzar el \% en massa de co\l.lagen adsorbit a l'apatita
 \end{itemize}
 
 \section{Disseny}
 
 \subsection{Sistema a estudiar}
-Per poder saber quins factors s'han de controlar cal entendre primer com funciona la part del procés amb el que s'obté l'apatita, veure \autoref{fig:esquema}. Inicialment el producte arriba del procés anterior i conté co\l.lagen i apatita en suspensió en aigua (línia verda al P\&D). Així doncs, s'ha de separar l'apatita de l'aigua, el problema és que precipita molt fàcilment i s'ha de forçar que es mantingui en suspensió. Per tant, hi ha una sèrie d'elements que asseguren que això sigui així; al dipòsit on va a parar (C-03) hi ha un parell de barrejadors i una bomba de recirculació (P-C32). 
+Per poder saber quins factors s'han de controlar cal entendre primer com funciona la part del procés amb el que s'obté l'apatita, veure \autoref{fig:esquema}. Inicialment el producte arriba del procés anterior i conté co\l.lagen i apatita en suspensió en aigua (línia marró al P\&D). Així doncs, s'ha de separar l'apatita de l'aigua i dissoldre el co\l.lagen adherit a l'apatita en suspensió, el problema és que precipita molt fàcilment i s'ha de forçar que es mantingui en suspensió. Per tant, hi ha una sèrie d'elements que asseguren que això sigui així; al dipòsit on va a parar (C-03) hi ha un parell de barrejadors i una bomba de recirculació (P-C32). 
 
 \begin{figure}[H]
 	\centering
@@ -92,7 +93,7 @@ Per poder saber quins factors s'han de controlar cal entendre primer com funcion
 	\label{fig:esquema}
 \end{figure}
 
-Per tal de separar el co\l.lagen i l'apatita s'usa un \emph{\href{https://youtu.be/uvWcLZWM_JY}{tricànter}} (veure \autoref{fig:tricanter}), tot i que en aquest procés només funciona com a \emph{decànter}. Aquesta màquina el que fa és, mitjançant força centrífuga separar els sòlids dels líquids dels greixos, no hi ha greix en aquest cas. Cal tenir en compte que aquesta separació no és perfecte i que part del co\l.lagen s'escapa junt amb l'apatita que s'obté.
+Per tal de separar el co\l.lagen i l'apatita s'usa un \emph{\href{https://youtu.be/uvWcLZWM_JY}{tricànter}} (veure \autoref{fig:tricanter}), tot i que en aquest procés només funciona com a \emph{decànter}. Aquesta màquina el que fa és, mitjançant força centrífuga separar els sòlids dels líquids dels greixos, no hi ha greix en aquest cas. Cal tenir en compte que aquesta separació no és perfecta i que part del co\l.lagen s'escapa junt amb l'apatita que s'obté.
 
 Per fer la separació la màquina consta d'un cilindre exterior que gira a alta velocitat i un vis sens fi interior que gira a una mica més ràpid que l'exterior, de manera que el vis sens fi va desplaçant lentament el sòlid cap al final del tricànter, situat a l'esquerra de la \autoref{fig:tricanter}, i el líquid cap al principi. 
 
@@ -167,6 +168,33 @@ Amb aquest interval de 12 hores entre mostres es calcula que es podran realitzar
 
 A part, els valors dels factors no es poden alterar tant fàcilment ja que això implicaria fer canvis molt bruscs en el sistema que s'està controlant de manera que el que es farà és alterar l'ordre de els experiments perquè s'hagi de canviar el mínim nombre de nivells dels factors d'un experiment a un altre.
 
+\subsection{Fonament teòric}
+Aquest sistema també ha estat estudiat matemàticament per part de l'empresa pel que el fet de tenir l'estudi ajudarà a comprovar empíricament els valors obtinguts. Cal tenir en compte que en aquest estudi teòric només s'han tingut en compte el valor de dos factors, el cabal d'aigua d'entrada al dipòsit i el volum en estat estacionari al dipòsit C-03, tenint en compte que tots els altres paràmetres són constants, veure \autoref{fig:sistema}.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{images/graphs/sistema}
+		\caption{Esquema simplificat del sistema teòric}
+		\label{fig:sistema}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.46\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/graphs/apatita}
+		\caption{\% en massa d'apatita en funció del cabal d'aigua d'entrada i del volum al C-03}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.46\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/graphs/colagen-apatita}
+		\caption{\% de co\l.lagen adsorbit a l'apatita en funció del cabal d'aigua d'entrada i del volum del C-03}
+	\end{subfigure}
+	\caption{Resultats del sistema teòric}
+\end{figure}
+
+Així doncs donat que interessa maximitzar el \% en massa d'apatita i minimitzar el \% en massa de co\l.lagen adsorbit a l'apatita teòricament els valors ideals haurien de ser $Q_{H_2O} = 2500 L/h$ i $V_{C-03} = 2000 kg$.
+
 \section{Resultats de l'experimentació}
 A partir de les mostres agafades, Proteïn ha proporcionat les dades de \autoref{tab:resultats}. Es pot observar que l'ordre dels experiments no és cronològic ja que com s'ha comentat anteriorment entre experiment i experiment s'havien de fer el mínim de canvis. També, algunes de les proves amb el diferencial (factor A) a 8 es van haver de repetir ja que el parell que s'estava proporcionant a la màquina no era prou alt i això feia que no s'arribés a assolir un diferencial de 8.
 
@@ -182,7 +210,7 @@ A partir de les mostres agafades, Proteïn ha proporcionat les dades de \autoref
 	\begin{tabular}{ l | l | l | l | l | l | l | l | l | l }
 		\rowcolor{gray!50}
 		FECHA & Hora & A & B & C & D & \%RS & \%C & \%C sms & \%P sms \\ \hline
-		02/17/2016 & 16:00 & 8 & 1800 & 50 & 1600 & 55.64 & 47.18 & 82.51 & 15.26 \\ 
+		02/12/2016 & 16:00 & 8 & 1800 & 50 & 1600 & 55.64 & 47.18 & 82.51 & 15.26 \\ 
 		16/12/2016 & 16:00 & 8 & 1800 & 50 & 2000 & 56.23 & 47.88 & 82.85 & 15.33 \\ 
 		02/12/2016 & 00:30 & 8 & 1800 & 75 & 1600 & 56.04 & 47.13 & 81.83 & 15.14 \\ 
 		16/12/2016 & 07:30 & 8 & 1800 & 75 & 2000 & 56.32 & 47.29 & 81.70 & 15.11 \\ 
