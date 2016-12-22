@@ -2,13 +2,14 @@
 \usepackage[margin=2cm]{geometry}
 
 \usepackage{fontspec}
-\usepackage{animate}
+%\usepackage{animate}
 \usepackage{graphicx}
 \usepackage[catalan]{babel}
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{array}
 \usepackage[table, dvipsnames]{xcolor}
+\usepackage{subcaption}
 
 \hypersetup{
 	colorlinks = true,
@@ -91,7 +92,7 @@ Aquesta diferència de velocitats entre els cilindres interiors i exteriors infl
 
 \begin{figure}[H]
 	\centering
-	\animategraphics[draft, autoplay, loop, poster =234, width = 0.5\textwidth]{15}{images/tricanter-movie/tricanter-movie-}{0}{384}
+	%\animategraphics[draft, autoplay, loop, poster =234, width = 0.5\textwidth]{15}{images/tricanter-movie/tricanter-movie-}{0}{384}
 	\caption{Animació explicativa de com funciona un tricanter}
 \end{figure}
 
@@ -108,9 +109,9 @@ El procés de mesura és una mica més complicat i consta d'una sèrie d'etapes:
 	\item Es torna a pesar i així es pot veure per composició estequiomètrica la quantitat d'apatita en \% en massa que hi havia a la mostra presa.
 \end{enumerate} 
 
-\subsection{Factors i nivells}
+\subsection{Factors i respostes}
 
-Un cop s'ha vist el sistema que a estudiar es poden veure els factors que s'hauran de controlar per tal de realitzar l'estudi:
+Un cop s'ha vist el sistema a estudiar es poden veure els factors que s'hauran de controlar per tal de realitzar l'estudi:
 
 \begin{itemize}
 	\item Diferència de velocitats entre els cilindres interior i exterior
@@ -131,12 +132,82 @@ Un cop s'ha vist el sistema que a estudiar es poden veure els factors que s'haur
 		C & Velocitat P-C32 (Hz) & 50 & 75 \\
 		D & Volum C-03 (kg) & 1600 & 2000 \\
 	\end{tabular}
+	\caption{Nivells escollits pels factors}
 \end{table}
+
+La variable de resposta que analitzarem serà el percentatge d'apatita en massa, que intentarem maximitzar variant els factors.
+%TODO: WHY?
+
 
 \subsection{Nombre d'experiments i restriccions externes}
 Per tal de realitzar els experiments s'ha decidit amb l'empresa de prendre una mostra cada 12 hores. Aquest interval s'ha decidit així per assegurar-se que el sistema està en equilibri a l'hora de prendre una mostra i que no hi ha altres factors que alteren el resultat, ja que si el sistema es trobés en un estat transitori el resultat es podria veure afectar i això no interessa.
 
 Amb aquest interval de 12 hores entre mostres es calcula que es podran realitzar tots els experiments d'un disseny factorial complet $2^4$ començant a prendre les mostres el 24 de novembre de 2016 i havent acabat als voltants del 16 de desembre de 2016. Tenint en compte que a la fabrica hi poden haver averies o altres incidents que impedeixin realitzar l'experiment.
+
+\section{Resultats de l'experimentació}
+A partir de les mostres agafades, Proteïn ens va proporcionar les següents dades:
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{2}{gray!25}{white}
+	\begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | }
+	FECHA & Hora & A & B & C & D & \%RS & \%C & \%C sms & \%P sms \\ \hline
+	02/17/2016 & 16:00 & 8 & 1800 & 50 & 1600 & 55.64 & 47.18 & 82.51 & 15.26 \\ \hline
+	16/12/2016 & 16:00 & 8 & 1800 & 50 & 2000 & 56.23 & 47.88 & 82.85 & 15.33 \\ \hline
+	02/12/2016 & 00:30 & 8 & 1800 & 75 & 1600 & 56.04 & 47.13 & 81.83 & 15.14 \\ \hline
+	16/12/2016 & 07:30 & 8 & 1800 & 75 & 2000 & 56.32 & 47.29 & 81.70 & 15.11 \\ \hline
+	26/11/2016 & 06:00 & 8 & 2400 & 50 & 1600 & 54.82 & 46.35 & 82.27 & 15.21 \\ \hline
+	13/12/2016 & 17:35 & 8 & 2400 & 50 & 2000 & 56.50 & 47.02 & 80.97 & 14.98 \\ \hline
+	02/12/2016 & 09:00 & 8 & 2400 & 75 & 1600 & 54.73 & 46.48 & 82.63 & 15.29 \\ \hline
+	07/12/2016 & 15:00 & 8 & 2400 & 75 & 2000 & 56.57 & 46.81 & 80.51 & 14.89 \\ \hline
+	13/12/2016 & 20:15 & 12 & 1800 & 50 & 1600 & 56.41 & 47.78 & 82.41 & 15.25 \\ \hline
+	13/12/2016 & 01:30 & 12 & 1800 & 50 & 2000 & 54.48 & 45.46 & 81.19 & 15.02 \\ \hline
+	25/11/2016 & 20:30 & 12 & 1800 & 75 & 1600 & 54.82 & 46.35 & 82.27 & 15.22 \\ \hline
+	14/12/2016 & 19:30 & 12 & 1800 & 75 & 2000 & 55.96 & 46.55 & 80.94 & 14.97 \\ \hline
+	25/11/2016 & 16:25 & 12 & 2400 & 50 & 1600 & 55.11 & 45.27 & 79.93 & 14.79 \\ \hline
+	01/12/2016 & 17:45 & 12 & 2400 & 50 & 2000 & 55.95 & 48.06 & 83.58 & 15.47 \\ \hline
+	15/12/2016 & 19:30 & 12 & 2400 & 75 & 1600 & 54.03 & 42.35 & 76.27 & 14.11 \\ \hline
+	06/12/2016 & 15:00 & 12 & 2400 & 75 & 2000 & 55.29 & 45.86 & 80.70 & 14.93 \\ \hline
+\end{tabular}
+\caption{Dades experimentals}
+\end{table}
+
+\section{Anàlisi}
+Duent a terme l’anàlisi factorial sobre les dades es decideix prendre com a resposta la concentració (\% en massa) d’apatita de la mostra. Amb aquest estudi s’obtenen els diagrames Normal i de Pareto que es poden observar en les següents figures. Al costat s’han afegit els diagrames obtinguts seleccionant com a resposta la concentració (\% en massa) de co\l.làgen. Aquests serveixen per comprovar que aquestes dues respostes estan relacionades fermament, degut que si una concentració augmenta l’altre disminueix per conseqüència.
+\begin{figure}[H]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/NormalEffects15P}
+		\caption{}
+		\label{fig:NormalEffects15P}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/NormalEffects15C}
+		\caption{}
+		\label{fig:NormalEffects15C}
+	\end{subfigure}
+	\caption{Normal Plots obtinguts amb l’anàlisi factorial tenint com a resposta \%P sms (a) i \%C sms (b)}
+	\label{fig:NormalEffects15}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/Pareto15P}
+		\caption{}
+		\label{fig:Pareto15P}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/Pareto15C}
+		\caption{}
+		\label{fig:Pareto15C}
+	\end{subfigure}
+	\caption{Diagrames de Pareto obtinguts amb l’anàlisi factorial tenint com a resposta \%P sms (a) i \%C sms (b)}
+	\label{fig:Pareto15}
+\end{figure}
 
 
 \end{document}
