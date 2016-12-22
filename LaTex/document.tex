@@ -241,7 +241,11 @@ Duent a terme l’anàlisi factorial sobre les dades es decideix prendre com a r
 
 S’observa en un primer instant que tots els efectes dels factors seleccionats tenen valors bastant petits. Per poder considerar algun dels efectes com a significatiu l’alfa ha de ser de 0,15, quan el valor per defecte és de 0,05. Això es pot explicar pel fel fet que els resultats obtinguts pels valors de les respostes no són del tot exactes, sinó que comporten un error significatiu. Això és degut a les suposicions que s’han pres en la mesura de la mostra, com per exemple que tota l’aigua s’ha evaporat o que el \% de greix en l’apatita és constant. També es duu a terme una conversió per estimar la quantitat de fòsfor en l’apatita, per tal de tenir en compte que els cristalls d’aquesta contenen aigua, i dita conversió és aproximada. Per totes aquestes raons la variància i l’error en els valors de resposta augmenta, cosa que fa que els efectes dels factors en comparació disminueixin.
 
-Per decidir quins valors donarem a les variables es consulten els coeficients de les interaccions:
+D’altra banda es pot apreciar que el factor que amb diferència té més efecte i que és considerat com a significatiu és l’ABD, que correspon a la combinació de Diferencial, Cabal i Volum de C-O3. També es veu que tant el Diferencial com el Cabal tenen efecte negatiu en la resposta. Això és degut a que essent reduïts tots dos fan que la mescla passi més estona en el tricanter, i que per tant la separació es faci millor. El que no té tant sentit aparent és que aquests dos factors tinguin efecte només en conjunt amb el Volum de C-O3, però es decideix acceptar el resultat com a correcte de totes maneres. Els factors individualment semblen tenir efectes que, encara que negligibles, ens ajudaran a prendre decisions a continuació.
+
+Es comprova que, efectivament, els resultats obtinguts fent l’estudi amb \%C i \%P sms com a resposta són directament dependents, casi idèntics, amb una diferència d’escala deguda als valors mitjans de les concentracions d’aquests elements.
+ 
+Per determinar ara els valors desitjats d’aquestes variables es duu a terme l’Interaction Plot que veiem a continuació, i s’analitzen els resultats reportats per Minitab.
 
 \begin{figure}[H]
 	\centering
@@ -250,4 +254,14 @@ Per decidir quins valors donarem a les variables es consulten els coeficients de
 	\label{fig:Coefs}
 \end{figure} 	
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{images/InteractionP}
+	\caption{Efectes i coeficients en la fórmula final de \%P sms}
+	\label{fig:InteractionP}
+\end{figure} 
+
+Veient les interaccions entre les tres variables i els seus efectes (que tot i què segons els normal plots de la \autoref{fig:NormalEffects15} no son significatius, no són negligibles) s’ha decidit donar valors baixos a les variables A i B i valor alt a la D. A més, a la \autoref{fig:InteractionP} es pot veure que si fiquem un valor alt a D(C-O3) es redueix l'efecte de les variables A i B, deixant el resultat sempre per sobre del 15\%. Això es bó ja que segurament al escollir un valor alt de D tindrem menys variabilitat en els resultats 	complirem mes sovint les restriccions del 15\%. Escollint aquests valors s’aconsegueix que ABD tingui un efecte positiu i que individualment cada una de les variables també ajudin a augmentar la resposta.
+
+Pel que respecta al factor C, s’ha decidit baix ja que el seu efecte era negatiu en la resposta i representa una reducció de cost per l’empresa. Recorda que la variable C representa la velocitat de la bomba de recirculació del dipòsit i s’estalviarà electricitat reduint la velocitat. 
 \end{document}
