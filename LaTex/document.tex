@@ -243,13 +243,15 @@ S’observa en un primer instant que tots els efectes dels factors seleccionats 
 
 D’altra banda es pot apreciar que el factor que amb diferència té més efecte i que és considerat com a significatiu és l’ABD, que correspon a la combinació de Diferencial, Cabal i Volum de C-O3. També es veu que tant el Diferencial com el Cabal tenen efecte negatiu en la resposta. Això és degut a que essent reduïts tots dos fan que la mescla passi més estona en el tricanter, i que per tant la separació es faci millor. El que no té tant sentit aparent és que aquests dos factors tinguin efecte només en conjunt amb el Volum de C-O3, però es decideix acceptar el resultat com a correcte de totes maneres. Els factors individualment semblen tenir efectes que, encara que negligibles, ens ajudaran a prendre decisions a continuació.
 
+Gràcies a que el anàlisi que s'ha fet es un $2^4$ i no un $2^{3-1}$ s'ha pogut trobar que el efecte mes significatiu es l'ABD, ja que amb el $2^{3-1}$ l'haguéssim confós amb el C. 
+
 Es comprova que, efectivament, els resultats obtinguts fent l’estudi amb \%C i \%P sms com a resposta són directament dependents, casi idèntics, amb una diferència d’escala deguda als valors mitjans de les concentracions d’aquests elements.
  
 Per determinar ara els valors desitjats d’aquestes variables es duu a terme l’Interaction Plot que veiem a continuació, i s’analitzen els resultats reportats per Minitab.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics{images/Coefs}
+	\includegraphics[width=.5\textwidth]{images/Coefs}
 	\caption{Efectes i coeficients en la fórmula final de \%P sms}
 	\label{fig:Coefs}
 \end{figure} 	
@@ -264,4 +266,16 @@ Per determinar ara els valors desitjats d’aquestes variables es duu a terme l�
 Veient les interaccions entre les tres variables i els seus efectes (que tot i què segons els normal plots de la \autoref{fig:NormalEffects15} no son significatius, no són negligibles) s’ha decidit donar valors baixos a les variables A i B i valor alt a la D. A més, a la \autoref{fig:InteractionP} es pot veure que si fiquem un valor alt a D(C-O3) es redueix l'efecte de les variables A i B, deixant el resultat sempre per sobre del 15\%. Això es bó ja que segurament al escollir un valor alt de D tindrem menys variabilitat en els resultats 	complirem mes sovint les restriccions del 15\%. Escollint aquests valors s’aconsegueix que ABD tingui un efecte positiu i que individualment cada una de les variables també ajudin a augmentar la resposta.
 
 Pel que respecta al factor C, s’ha decidit baix ja que el seu efecte era negatiu en la resposta i representa una reducció de cost per l’empresa. Recorda que la variable C representa la velocitat de la bomba de recirculació del dipòsit i s’estalviarà electricitat reduint la velocitat. 
+
+\section{Conclusions}
+Hem acabat concloent que el factor amb un efecte més significatiu en la concentració de fosfat en la mostra final és la interacció entre el diferencial, el cabal i el volum en C-O3. Encara que aquest no és el resultat que esperàvem des d’un principi, s’ha acabat veient que és raonable. En canvi, la bomba de recirculació no ha mostrat tenir un efecte massa significatiu a diferencia del que haviem previst.
+
+Per extreure’n les conclusions definitives caldrà fer un seguiment de la resposta amb els valors dels factors que hem especificat per comprovar que el nivell de fosfat supera els requeriments amb els nous factors, i comparar els valors amb els obtinguts amb els valors actuals per comprovar que hi ha hagut una millora.
+
+Aquest treball ens ha permès aplicar els coneixements teòrics adquirits durant l’assignatura a un problema real derivat d’una empresa.
+Tot i la bona disposició de l’empresa alhora de facilitar-nos les dades i explicar-nos el funcionament de la fàbrica, el món laboral presenta diversos reptes que hem hagut d’afrontar, com ara un numero d’experiments fixat i una bona planificació dels mateixos.
+
+Estem satisfets de la col·laboració amb l’empresa ja que creiem que ambdós n’hem sortit beneficiats. L’empresa ens ha facilitat les dades i ha realitzat els experiments i nosaltres hem fet una anàlisi per què millorin la qualitat d’un dels seus productes.
+
+
 \end{document}
