@@ -5,7 +5,7 @@
 \usepackage{animate}
 \usepackage{graphicx}
 \usepackage[catalan]{babel}
-\usepackage{hyperref}
+\usepackage[unicode]{hyperref}
 \usepackage{float}
 \usepackage{array}
 \usepackage[table, dvipsnames]{xcolor}
@@ -106,12 +106,6 @@ Aquesta diferència de velocitats entre els cilindres interiors i exteriors infl
 	\label{fig:tricanter}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\animategraphics[draft, autoplay, loop, poster =234, width = 0.5\textwidth]{15}{images/tricanter-movie/tricanter-movie-}{0}{384}
-	\caption{Animació explicativa de com funciona un tricanter}
-\end{figure}
-
 \subsection{Obtenció i mesura d'una mostra}
 Per obtenir una mostra simplement s'agafa de la sortida del tricànter una mica de producte i després es porta al laboratori on es mesurarà.
 
@@ -125,13 +119,19 @@ El procés de mesura és una mica més complicat i consta d'una sèrie d'etapes:
 	\item Es torna a pesar i així es pot veure per composició estequiomètrica la quantitat d'apatita en \% en massa que hi havia a la mostra presa.
 \end{enumerate} 
 
-Un cop s'ha trobat la massa d'apatita es pot saber el \% en massa de fòsfor de la mostra per estequiometria. El valor teòric és $\% fosfor = 0,2 \cdot \% apatita$ però, donat que el cristall d'apatita porta aigua el real és $\% fosfor = 0,185 \cdot \% apatita$. A part, cal considerar que no tota l'aigua s'arriba a evaporar i que hi ha un petit \% de greix que porta apatita, que normalment es considera constant però que pot ser una font potencial d'errors, aquest valor mitjà sol ser de 0,1459. Per tant:
+Un cop s'ha trobat la massa d'apatita es pot saber el \% en massa de fòsfor de la mostra per estequiometria. El valor teòric és $\% fosfor = 0,2 \cdot \% apatita$ però, donat que el cristall d'apatita porta aigua el real és $\% fosfor = 0,185 \cdot \% apatita$. Per tant, per obtenir la quantitat de fòsfor que conté la mostra s'usa:
+$$
+\boxed{\% \text{fòsfor (P)} = \% apatita \cdot 0,185}
+$$
 
-$$
-\frac{\% \text{fòsfor (P)}}{0,185} = \% apatita = 
-\frac{W_{ap}}{W_{ap} + W_{H_2O + \text{greix}} + W_{\text{co\l.làgen}}} =
-\frac{1}{1 + 0,1459 + \% \text{co\l.làgen en apatita}}
-$$
+A part, cal considerar que no tota l'aigua s'arriba a evaporar i que hi ha un petit \% de greix que porta apatita, que normalment es considera constant però que pot ser una font potencial d'errors, aquest valor mitjà sol ser de 0,1459. Així doncs, per obtenir la quantitat de co\l.lagen adsorbit a l'apatita s'usa:
+\begin{gather*}
+	\% apatita =
+	\frac{W_{ap}}{W_{ap} + W_{H_2O + \text{greix}} + W_{\text{co\l.lagen}}} =
+	\frac{1}{1 + 0,1459 + \% \text{co\l.lagen en apatita}} \implies \\
+	\implies 
+	\boxed{\% \text{co\l.lagen en apatita} = \frac{1}{\% apatita} - 1,1459}
+\end{gather*}
 
 \subsection{Factors i respostes}
 
@@ -296,14 +296,14 @@ Veient les interaccions entre les tres variables i els seus efectes (que tot i q
 Pel que respecta al factor C, s’ha decidit baix ja que el seu efecte era negatiu en la resposta i representa una reducció de cost per l’empresa. Recorda que la variable C representa la velocitat de la bomba de recirculació del dipòsit i s’estalviarà electricitat reduint la velocitat. 
 
 \section{Conclusions}
-Hem acabat concloent que el factor amb un efecte més significatiu en la concentració de fosfat en la mostra final és la interacció entre el diferencial, el cabal i el volum en C-O3. Encara que aquest no és el resultat que esperàvem des d’un principi, s’ha acabat veient que és raonable. En canvi, la bomba de recirculació no ha mostrat tenir un efecte massa significatiu a diferencia del que haviem previst.
+S'ha acabat concloent que el factor amb un efecte més significatiu en la concentració de fosfat en la mostra final és la interacció entre el diferencial, el cabal i el volum en C-O3. Encara que aquest no és el resultat que esperàvem des d’un principi, s’ha acabat veient que és raonable. En canvi, la bomba de recirculació no ha mostrat tenir un efecte massa significatiu a diferencia del que haviem previst.
 
-Per extreure’n les conclusions definitives caldrà fer un seguiment de la resposta amb els valors dels factors que hem especificat per comprovar que el nivell de fosfat supera els requeriments amb els nous factors, i comparar els valors amb els obtinguts amb els valors actuals per comprovar que hi ha hagut una millora.
+Per extreure'n les conclusions definitives caldrà fer un seguiment de la resposta amb els valors dels factors que s'han especificat per comprovar que el nivell de fosfat supera els requeriments amb els nous factors, i comparar els valors amb els obtinguts amb els valors actuals per comprovar que hi ha hagut una millora.
 
 Aquest treball ens ha permès aplicar els coneixements teòrics adquirits durant l’assignatura a un problema real derivat d’una empresa.
 Tot i la bona disposició de l’empresa alhora de facilitar-nos les dades i explicar-nos el funcionament de la fàbrica, el món laboral presenta diversos reptes que hem hagut d’afrontar, com ara un numero d’experiments fixat i una bona planificació dels mateixos.
 
-Estem satisfets de la col·laboració amb l’empresa ja que creiem que ambdós n’hem sortit beneficiats. L’empresa ens ha facilitat les dades i ha realitzat els experiments i nosaltres hem fet una anàlisi per què millorin la qualitat d’un dels seus productes.
+Estem satisfets de la co\l.laboració amb l’empresa ja que creiem que ambdós n’hem sortit beneficiats. L’empresa ens ha facilitat les dades i ha realitzat els experiments i nosaltres hem fet una anàlisi per què millorin la qualitat d’un dels seus productes.
 
 
 \end{document}
