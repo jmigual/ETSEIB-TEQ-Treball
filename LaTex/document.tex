@@ -10,6 +10,9 @@
 \usepackage{array}
 \usepackage[table, dvipsnames]{xcolor}
 \usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 
 \hypersetup{
 	colorlinks = true,
@@ -51,9 +54,9 @@ En aquest treball s'han usat les tècniques de disseny d'experiments per poder v
 \subsection{Tema escollit}
 L'activitat principal de \emph{Proteïn S.A.} és fabricar  \emph{\href{https://es.wikipedia.org/wiki/Col\%C3\%A1geno_hidrolizado}{co\l.lagen hidrolitzat}} a partir de l'ós de porc que és usat a la indústria de l'alimentació per afegir els nutrients necessaris a la carn. 
 
-A part, un subproducte que es genera és el \emph{\href{https://es.wikipedia.org/wiki/Fosfato_tric\%C3\%A1lcico}{Fosfat Tricàlcic}} ($Ca_3 (PO_4)_2$) o també conegut com \emph{apatita} i un dels usos més comuns és per les gallines que ponen ous perquè no es quedin sense calci.
+A part, un subproducte que es genera és el \emph{\href{https://es.wikipedia.org/wiki/Fosfato_tric\%C3\%A1lcico}{Fosfat Tricàlcic}} ($Ca_3 (PO_4)_2$) o també conegut com \emph{apatita} i un dels usos més comuns és per les gallines que ponen ous perquè no es quedin sense calci. 
 
-El problema principal de l'apatita és que els compradors la volen amb un \% en massa igual o superior al 15\%. Si aquesta condició no es pot garantir els clients reclamaran indemnitzacions o aniran a comprar a la competència. Així doncs, aquest serà l'objecte principal de l'estudi ja que l'empresa vol assegurar-se que la qualitat de la seva apatita és bona. 
+El problema principal de l'apatita és que els compradors la volen amb un \% de fòsfor en massa igual o superior al 15\%. Si aquesta condició no es pot garantir els clients reclamaran indemnitzacions o aniran a comprar a la competència. Així doncs, aquest serà l'objecte principal de l'estudi ja que l'empresa vol assegurar-se que la qualitat de la seva apatita és bona. 
 
 A part també hi ha co\l.lagen que s'escapa per la línia de l'apatita a l'hora de separar els dos productes pel que també pot ser d'interès minimitzar la quantitat que es perd perquè no s'ha pogut separar prou bé.
 
@@ -61,14 +64,14 @@ A part també hi ha co\l.lagen que s'escapa per la línia de l'apatita a l'hora 
 Donat que els clients poden reclamar si la qualitat d'apatita no és suficient i que hi ha part de co\l.lagen que es perd per la línia de l'apatita ens interessa complir els següents objectius:
 
 \begin{itemize}
-	\item Maximitzar el \% en massa d'apatita
+	\item Maximitzar el \% en massa de fosfor a l'apatita
 	\item Minimitzar el \% en massa de co\l.lagen a la línia de l'apatita
 \end{itemize}
 
 \section{Disseny}
 
 \subsection{Sistema a estudiar}
-Per poder saber quins factors s'han de controlar cal entendre primer com funciona la part del procés amb el que s'obté l'apatita, veure \autoref{fig:esquema}. Inicialment el producte arriba del procés anterior i conté co\l.lagen i apatita en suspensió en aigua (línia blava al P\&D). Així doncs, s'ha de separar l'apatita de l'aigua, el problema és que precipita molt fàcilment i s'ha de forçar que es mantingui en suspensió. Per tant, hi ha una sèrie d'elements que asseguren que això sigui així; al dipòsit on va a parar (C-03) hi ha un parell de barrejadors i una bomba de recirculació (P-C32). 
+Per poder saber quins factors s'han de controlar cal entendre primer com funciona la part del procés amb el que s'obté l'apatita, veure \autoref{fig:esquema}. Inicialment el producte arriba del procés anterior i conté co\l.lagen i apatita en suspensió en aigua (línia verda al P\&D). Així doncs, s'ha de separar l'apatita de l'aigua, el problema és que precipita molt fàcilment i s'ha de forçar que es mantingui en suspensió. Per tant, hi ha una sèrie d'elements que asseguren que això sigui així; al dipòsit on va a parar (C-03) hi ha un parell de barrejadors i una bomba de recirculació (P-C32). 
 
 \begin{figure}[H]
 	\centering
@@ -102,12 +105,20 @@ Per obtenir una mostra simplement s'agafa de la sortida del tricànter una mica 
 El procés de mesura és una mica més complicat i consta d'una sèrie d'etapes:
 
 \begin{enumerate}
-	\item Es pesa la mostra que conté, entre d'altres, aigua, co\l.lagen i fosfat.
+	\item Es pesa la mostra que conté, entre d'altres, aigua, greix, co\l.lagen i fosfat.
 	\item Es posa en un forn a 100ºC per tal d'evaporar tota l'aigua 
 	\item Es torna a pesar i es pot veure la quantitat d'aigua que s'ha eliminat
 	\item Es posa de nou en un forn però ara a 400ºC per tal d'eliminar mitjançant piròlisi tota la matèria orgànica.
 	\item Es torna a pesar i així es pot veure per composició estequiomètrica la quantitat d'apatita en \% en massa que hi havia a la mostra presa.
 \end{enumerate} 
+
+Un cop s'ha trobat la massa d'apatita es pot saber el \% en massa de fòsfor de la mostra per estequiometria. El valor teòric és $\% fosfor = 0,2 \cdot \% apatita$ però, donat que el cristall d'apatita porta aigua el real és $\% fosfor = 0,185 \cdot \% apatita$. A part, cal considerar que no tota l'aigua s'arriba a evaporar i que hi ha un petit \% de greix que porta apatita, que normalment es considera constant però que pot ser una font potencial d'errors, aquest valor mitjà sol ser de 0,1459. Per tant:
+
+$$
+\frac{\% \text{fòsfor (P)}}{0,185} = \% apatita = 
+\frac{W_{ap}}{W_{ap} + W_{H_2O + \text{greix}} + W_{\text{co\l.làgen}}} =
+\frac{1}{1 + 0,1459 + \% \text{co\l.làgen en apatita}}
+$$
 
 \subsection{Factors i respostes}
 
